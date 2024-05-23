@@ -5,7 +5,7 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 
 // Definimos el nombre del archivo HTML que vamos a leer
-let archivoHTML = 'mi_primera_pagina.html';
+let archivoHTML = 'proyecto.html';
 
 // Creamos un servidor HTTP
 const server = createServer(async (request, respuesta) => {
