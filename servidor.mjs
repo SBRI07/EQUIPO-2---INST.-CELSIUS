@@ -27,7 +27,7 @@ const server = createServer(async (request, respuesta) => {
         // Leemos el archivo CSS
         const data = await readFile("estilos.css", 'utf8');
         // Enviamos el contenido del archivo HTML como respuesta
-        respuesta.writeHead(200, { 'Content-Type': 'text/html' });
+        respuesta.writeHead(200, { 'Content-Type': 'text/css' });
         respuesta.end(data);
     }
     else {
