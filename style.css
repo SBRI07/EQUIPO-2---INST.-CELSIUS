@@ -1,90 +1,124 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
+  
 header {
-    background-color: #49007a;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    background-color: #77078d;
+    color: white;
+    padding: 10px 0;
 }
 
 header h1 {
-    margin: 0;
+    margin-left: 20px;
+    font-weight: 500;
 }
 
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
+nav li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
-nav ul li a {
-    color: #fff;
+nav a {
+    color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
+nav input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
 main {
-    padding: 2rem;
+    padding: 20px;
+}
+
+footer {
+  background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h2{
+    text-align: left;
 }
 
 .productos {
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.titulo-productos {
+    margin-bottom: 20px; /* Espacio entre el título y los productos */
+}
+
+.productos-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    justify-content: space-around; /* Distribuye los productos con espacio alrededor */
+    flex-wrap: wrap; /* Permite que los productos se envuelvan en varias líneas */
+    gap: 20px; /* Espacio entre los productos */
 }
 
 .producto {
+    flex: 0 1 calc(33.333% - 20px); /* Calcula el ancho de cada producto */
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 1rem;
-    width: calc(33.333% - 4rem);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-sizing: border-box; /* Incluye el padding y border en el ancho y alto total */
 }
 
 .producto img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0; /* Aplica bordes redondeados solo arriba */
 }
 
+/* Estilos adicionales para el contenido del producto */
 .producto h3 {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
+    margin-top: 0.5rem;
 }
 
 .producto p {
-    margin: 0.5rem 0;
+    margin-bottom: 0.5rem;
 }
 
-.precio {
-    font-size: 1.25rem;
+.producto .precio {
     font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
 }
 
-button {
-    background-color: #28a745;
-    color: #fff;
+.producto button {
+    background-color: #007bff;
+    color: white;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    margin-top: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #218838;
+.producto button:hover {
+    background-color: #0056b3;
 }
 
 #contacto form {
