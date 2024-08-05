@@ -16,20 +16,6 @@ header {
     margin-right: 50px;
 }
 
-.cta-button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: 2px solid #333;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none; /* Quita el subrayado por defecto */
-    transition: background-color 0.3s ease; /* Efecto de transición suave */
-    margin-bottom: 20px; /* Agrega espacio inferior al botón */
-  }
-  
 nav {
     max-width: 1000px;
     margin: 0 auto;
