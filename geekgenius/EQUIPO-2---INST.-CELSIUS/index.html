@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda GeekGenius</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li><a href="contacto.html">CONTACTANOS</a></li>
+                <li><input type="text" placeholder="BUSCAR"></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class= "imagen-logo"><img src="imagenes/imagen logo blanco.PNG" alt="Logo GeekGenius"></div>
+            <h1>¡Bienvenido!</h1>
+            <p>GeekGenius es una plataforma web diseñada para ofrecerte una experiencia única en la adquisición de productos tecnológicos.</p>
+            <p>Explora nuestra selección de <a href="productos.html">productos</a> y encuentra lo que necesitas.</p>
+            <!-- Carrusel -->
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <img src="imagenes/imagenproducto1.webp" alt="PC Gamer">
+                    <img src="imagenes/imagenproducto6.webp" alt="Notebook Gamer">
+                    <img src="imagenes/imagenproducto4.jpg" alt="Monitor Samsung">
+                </div>
+                <button class="carousel-prev">&#10094;</button>
+                <button class="carousel-next">&#10095;</button>
+            </div>
+
+            <section class="highlight-section">
+            <!-- Sección de productos destacados añadida -->
+            <div class="featured-products">
+                <h2>¡Productos Destacados!</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="imagenes/imagenproducto1.webp" alt="PC Gamer">
+                        <h3>PC Gamer</h3>
+                        <p>PC de alta gama para aquellos que buscan el máximo rendimiento y las mejores experiencias en el mundo digital.</p>
+                        <a class="button">Ver Detalles</a>
+                    </div>
+                    <div class="product">
+                        <img src="imagenes/imagenproducto6.webp" alt="Notebook Gamer">
+                        <h3>Notebook Gamer</h3>
+                        <p>Notebook de alta gama poderosa y versátil para usuarios exigentes que necesitan un equipo portátil con el máximo rendimiento</p>
+                        <a class="button">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <p>&copy; 2024 Tienda de Tecnología. Todos los derechos reservados.</p>
+        </section>
+    </main>
+
+    <script>
+        const carousel = document.querySelector('.carousel-inner');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            slideIndex = (slideIndex - 1 + 3) % 3;
+            showSlide(slideIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            slideIndex = (slideIndex + 1) % 3;
+            showSlide(slideIndex);
+        });
+    </script>
+</body>
+</html>
